@@ -1,0 +1,73 @@
+Network Layer
+=======================
+1. IP Internet Protocol
+    - IPv4, IPv6, ICMP, Dynamic Routing Protocols
+    - logical addressing (OSI Layer 3)             ---as opposed to layer 2 physical addressing
+    - End-to-end addressing,  
+
+              from(PC) ---> Router ---> ISP-Cloud ---> Router ---> to(PC)    <---- and back again
+
+2. Routers  ---- Data Plane, Control Plane, QoS, SDN Software Defined Networking
+3. Routing  ---- host routing table and default gateway, router's routing table
+4. Configuring a router 
+   
+
+IP
+===============
+ - IP packet header  ------------ (IP header (transport header + Data))
+ - Connectionless    ------------ no prior established connection at this layer
+ - Best Effort       ------------ no reliability, no retransmission at this layer
+ - Media Independent ------------ works with fiber, copper, wireless, etc. 
+ - IPv4 addressing
+    - network address ----------- 192.168.3.0     (first address in the network)
+    - broadcast address --------- 192.168.3.255   (last address in the network)
+    - host address    ----------- 192.168.3.100
+    - netmask         ----------- 255.255.255.0   (defines the network)
+                                   N   N   N  H
+    - default gateway ----------- 192.168.3.1     (gateway is the router on the network)
+    - multicast address --------- 224.0.0.1       (used for sending to groups)
+
+Routers
+======================
+Make forwarding decisions at Layer 3 ---------- Using Layer 3 header information (dst ip address) 
+Determine the Best Path ----------------------- Using the routing table
+Forward data            ----------------------- Move packet from input interface to output interface 
+
+Hosts Computers
+======================
+also make forwarding decisions at layer 3
+also have routing tables  ------------------- netstat -r
+Use default gateway       ------------------- for unknown networks (route table - 0.0.0.0 0.0.0.0 gateway)
+
+
+Logical Addressing
+==========================
+192.168.44.211  --- IP address
+255.255.255.0   --- subnet mask    ---- /24, means 24 ones in the mask  11111111.11111111.11111111.00000000
+ N   N   N  H
+==================
+192 168 44  0   --- network
+192 168 44  ?   --- host
+192 168 44 255  --- broadcast
+
+Are the following addresses all on the same network? yes or no
+192.168.44.111/24, 
+192.168.44.3/24, 
+192.168.44.252/24, 
+192.168.44.1/24
+
+Are the following addresses all on the same network? yes or no
+172.16.2.32/24, 
+172.16.2.6/24, 
+172.16.2.111/24, 
+172.16.20.167/24    
+
+
+
+
+
+
+
+
+
+

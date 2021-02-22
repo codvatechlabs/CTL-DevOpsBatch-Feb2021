@@ -1,0 +1,42 @@
+//==============\\
+    OSI Model      created by the ISO - standardizes communication functions of a computing system  
+\\==============//                                   
+
+7. Application*  - Programs and Services
+6. Presentation* - file formats, compression
+5. Session*      - open, close and manage sessions between end-user application processes
+4. Transport     - Ports, logical communication between application processes                                   
+3. Network       - Logical Addressing, Routers                          
+2. Data Link+    - Physical Addressing, Switches, NICs 
+1. Physical+     - Bits, Media (copper, fiber, radio), NICs, Hubs 
+
+7. Application*  - HTTP, HTTPS, DNS, FTP, SMTP, Telnet, SSH, DHCP, SSL/TLS    --> for open protocols see RFCs
+6. Presentation* - MIME                                                           tools.ietf.org/html/
+5. Session*      - RTP, SOCKS
+4. Transport     - TCP, UDP                                 
+3. Network       - IPv4, IPv6, ICMP, ICMPv6, IPSec                           
+2. Data Link+    - MAC addressing, Ethernet, WiFi, DSL, PPP,                 -->"What is Internet, Anyway?"
+1. Physical+     - Encoding 1 and 0 s
+
+TCP/IP Protocol Suite    PDU         Header
+=====================   =========   ===========         
+Application Layer* ----- Data        Application specific fields   
+Transport Layer    ----- Segments    src & dst port numbers (host & service)
+Internet Layer     ----- Datagrams   src & dst ip addresses
+Link Layer+        ----- Frames      src & dst mac addresses
+
+Requests              Socket (ip address + port)                    --> RFC 4838 Interplanetary Network Wow!
+============         ===========================
+ ---> yahoo.com ----> 98.138.219.231:80 (http)
+ ---> yahoo.com ----> 98.138.219.231:25 (smtp)
+
+Responses       Socket
+============ ==========================
+mycomputer  10.116.34.165:23620 (random port) <-------  
+mycomputer  10.116.34.165:23631 (random port) <------- 
+
+Private ip addressing
+=======================
+10.0.0.0 - anything starting with a 10.
+172.16.0.0 - anything starting with a 172.16. up to 172.31
+192.168.0.0 - anything starting with a 192.168.

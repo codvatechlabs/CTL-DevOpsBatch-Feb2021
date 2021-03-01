@@ -1,0 +1,4 @@
+A simple and lightweight SQL client desktop/terminal
+with cross database and platform support.
+
+Download Link : https://github.com/sqlectron/sqlectron-gui/releases/tag/v1.35.0

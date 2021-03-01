@@ -1,4 +1,80 @@
-A simple and lightweight SQL client desktop/terminal
-with cross database and platform support.
+A simple and lightweight SQL client desktop/terminal with cross database and platform support.
 
+SQLElectron(OpenSource)
 Download Link : https://github.com/sqlectron/sqlectron-gui/releases/tag/v1.35.0
+
+DataGrip(One month Free Trial)
+https://www.jetbrains.com/datagrip/download/
+
+
+### SQL Create DB 
+The CREATE DATABASE statement is used to create a new SQL database.
+
+Syntax: 
+CREATE DATABASE databasename;
+
+Example: 
+The following SQL statement creates a database called "ctldemo":
+
+
+###The SQL CREATE TABLE Statement
+The CREATE TABLE statement is used to create a new table in a database.
+
+Syntax
+CREATE TABLE table_name (
+    column1 datatype,
+    column2 datatype,
+    column3 datatype,
+   ....
+);
+
+Example Query: 
+The following example creates a table called "ctl_emp" that contains three columns
+CREATE TABLE ctl_emp (
+    emp_id numeric,
+    emp_name varchar(30),
+    emp_dep varchar(30)
+);
+
+
+
+###INSERT INTO Query
+The INSERT INTO statement is used to insert new records in a table.
+INSERT INTO Syntax
+It is possible to write the INSERT INTO statement in two ways.
+
+Query 1 : 
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
+If you are adding values for all the columns of the table, you do not need to specify the column names in the SQL query. However, make sure the order of the values is in the same order as the columns in the table. The INSERT INTO syntax would be as follows:
+
+Or 
+Query2 
+INSERT INTO table_name
+VALUES (value1, value2, value3, ...);
+
+Example Query:
+INSERT INTO ctl_emp (emp_id, emp_name, emp_dep)
+VALUES (101, "Shubham Ranbhare", "DevOps");
+
+
+###The SQL SELECT Statement
+The SELECT statement is used to select data from a database.
+
+The data returned is stored in a result table, called the result-set.
+
+SELECT Syntax
+SELECT column1, column2, ...
+FROM table_name;
+Here, column1, column2, ... are the field names of the table you want to select data from. If you want to select all the fields available in the table, use the following syntax:
+Example Query : 
+select * from ctl_emp
+
+###The SQL DELETE Statement
+The DELETE statement is used to delete existing records in a table.
+
+DELETE Syntax
+DELETE FROM table_name WHERE condition;
+
+Example Query :
+DELETE FROM ctl_emp where emp_id = 101

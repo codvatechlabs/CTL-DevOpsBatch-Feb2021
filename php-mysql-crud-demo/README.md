@@ -16,14 +16,6 @@ sudo /opt/lampp/lampp start
 
 
 
-Go to below path :
-vi /opt/lampp/etc/extra/httpd-xampp.conf and add below line (Require all granted)
-<LocationMatch "^/(?i:(?:xampp|security|licenses|phpmyadmin|webalizer|server-status|server-info))">
-# Require local
-Require all granted
-ErrorDocument 403 /error/XAMPP_FORBIDDEN.html.var
-</LocationMatch>
-
 Restart lampp
 sudo /opt/lampp/lampp restart
 

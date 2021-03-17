@@ -1,0 +1,14 @@
+Assignment 01:
+Create Monitoring Dashboard using CloudWatch for Demo PHP Application using below AWS Services
+	AWS EC2 Instance : i-044c919ef59b8fa63
+	AWS ALB : http://elbdemo-586759842.ap-south-1.elb.amazonaws.com/
+	AWS RDS : demosql.cw19ofhf2lr5.ap-south-1.rds.amazonaws.com
+	
+Note : I have already configured one ec2, one RDS and one ALB
+
+Assignment 02:
+Create and Configure Alarms for below metrics in PHS Demo Application
+EC2
+RDS
+ALB
+

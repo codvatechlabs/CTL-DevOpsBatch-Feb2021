@@ -5,3 +5,5 @@ sudo wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-mav
 sudo sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
 sudo yum install -y apache-maven
 mvn --version
+
+https://mirrors.estointernet.in/apache/tomcat/tomcat-9/v9.0.45/src/apache-tomcat-9.0.45-src.tar.gz
